@@ -1,0 +1,3 @@
+tasks:
+  - before: ./install_just.sh
+  - init: ./install_just.sh
