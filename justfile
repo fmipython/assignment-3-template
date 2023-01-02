@@ -56,7 +56,7 @@ pull-template:
         git checkout tests* --theirs &>/dev/null
         git checkout justfile --theirs &>/dev/null
         git add --all
-        git merge --continue -s theirs &>/dev/null
+        git merge --continue &>/dev/null
     fi
 
     echo "Merge with template completed"
