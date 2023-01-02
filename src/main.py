@@ -101,6 +101,7 @@ def create_app():
 
         Expects the 'token' header to be populated with the GITHUB_TOKEN of the user
         https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        If it's an invalid (empty) token, it's ignored
 
         Returns a JSON object with 1 key: result, which has a list of all repositories
         e.g.
@@ -125,6 +126,7 @@ def create_app():
 
         Expects the 'token' header to be populated with the GITHUB_TOKEN of the user
         https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        If it's an invalid (empty) token, it's ignored
 
         Returns a JSON object with 1 key: result, which has a list of all repositories
         e.g.
@@ -150,6 +152,7 @@ def create_app():
 
         Expects the 'token' header to be populated with the GITHUB_TOKEN of the user
         https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        If it's an invalid (empty) token, it's ignored
 
         Returns a JSON object with 1 key: result, which has a list of all repositories
         e.g.

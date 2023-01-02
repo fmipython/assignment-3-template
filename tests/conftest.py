@@ -15,4 +15,6 @@ def pytest_generate_tests(metafunc):
             metafunc.parametrize("token", [option_value])
         else:
             token = os.getenv('GITHUB_TOKEN')
+            if token is None or token == 'None':
+                token = ''
             metafunc.parametrize("token", [token])
