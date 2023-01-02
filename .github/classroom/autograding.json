@@ -1,0 +1,144 @@
+{
+  "tests": [
+    {
+      "name": "test_config",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_config'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_fail",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_fail'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_health",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_health'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_languages",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_languages and not _error'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_languages_error",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_languages_error'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_metrics_success",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k test_metrics_success",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_metrics_errors",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_metrics_errors'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_metrics_fail",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_metrics_fail'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_reset_metrics",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_reset_metrics'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_repo",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_repo and not _error and not repos'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_repo_error",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_repo_error'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_repos",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_repos and not _error'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "test_repos_error",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pytest -k 'test_repos_error'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 4
+    },
+    {
+      "name": "lint",
+      "setup": "sudo -H pip3 install pytest && pip3 install -r requirements.txt",
+      "run": "python -m pylint src --disable=E0401",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    }
+  ]
+}
