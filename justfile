@@ -50,7 +50,7 @@ pull-template:
         git commit -m "Checkpoint before merging template"
     fi
 
-    if git merge template/main --allow-unrelated-histories &>/dev/null; then
+    if git merge template/main --allow-unrelated-histories -m 'Merge template' &>/dev/null; then
         echo "Merge conflicts occurred, resolving coflicts"
         git checkout src* --ours &>/dev/null
         git checkout tests* --theirs &>/dev/null
