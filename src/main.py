@@ -1,8 +1,15 @@
+"""
+GitHub Proxy API
+"""
+
 def create_app():
     """
     Creates a Flask API
 
-    The Flask configuration must be loaded from the file pointed by the environment variable FLASK_CONFIG_PATH
+    The Flask configuration must be loaded from the file
+    pointed by the environment variable FLASK_CONFIG_PATH
+
+    Return the Flask app
 
     Routes:
     /
@@ -17,7 +24,7 @@ def create_app():
         Returns the server configuration, which was loaded from the FLASK_CONFIG_PATH variable
         The SECRET_KEY field of the config is removed.
         Always succeeds with response code 200
-    
+
     /metrics
         Returns the recorder metrics by the server.
         The result excludes the data for the current call to /metrics
@@ -25,8 +32,8 @@ def create_app():
         {
             'calls': 7,
             'errors': 3,
-            'sent_bytes': 26, 
-            'last_clear': 1.0, 
+            'sent_bytes': 26,
+            'last_clear': 1.0,
             'endpoints': {
                 'health': {
                     'calls': 4,
@@ -54,7 +61,8 @@ def create_app():
             Total bytes returned by the server from all endpoints
         * last_clear: float
             Time in seconds since the epoch as a floating point number
-            This field records the last time when a metrics reset occurs (by the /reset_metrics endpoint)
+            This field records the last time when a metrics reset occurs
+            (by the /reset_metrics endpoint)
         * endpoints: dict[endpoint name] -> dict
             For each endpoint of the server EN, we record individual metrics:
             * calls: int
@@ -105,7 +113,8 @@ def create_app():
 
     /languages/<user>/<repo>
         Returns the languages for a user's repository
-        The languages is a dictionary of language name and number of bytes of code written in that language
+        The languages is a dictionary of language name and
+        number of bytes of code written in that language
         The user is specified as a GET parameter <user>
         The repository is specified as a GET parameter <repo>
 
@@ -153,8 +162,7 @@ def create_app():
         }
 
     """
-    pass
+
 
 if __name__ == '__main__':
-    app = create_app()
-    app.run()
+    create_app().run()
