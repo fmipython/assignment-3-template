@@ -5,7 +5,7 @@ import pytest
 
 @pytest.fixture
 def client():
-    os.environ['FLASK_CONFIG_PATH'] = 'config/base.cfg'
+    os.environ['FLASK_CONFIG_PATH'] = 'config/test.cfg'
     app = create_app()
     return app.test_client()
 
