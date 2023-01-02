@@ -47,7 +47,7 @@ pull-template:
     if git diff --exit-code &>/dev/null && git diff --staged --exit-code &>/dev/null; then
         echo "Creating a commit with all current changes as backup"
         git add --all
-        git commit -m "Pre-merge with template"
+        git commit -m "Checkpoint before merging template"
     fi
 
     if git merge template/main --allow-unrelated-histories &>/dev/null; then
