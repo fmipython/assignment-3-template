@@ -10,7 +10,7 @@ def client():
     return app.test_client()
 
 
-def test_metrics(client):
+def test_metrics_success(client):
     client.get('/metrics')
     response = client.get('/metrics')
     assert response.status_code == 200
