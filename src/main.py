@@ -128,7 +128,7 @@ def create_app():
         https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
         If it's an invalid (empty) token, it's ignored
 
-        Returns a JSON object with 1 key: result, which has a list of all repositories
+        Returns a JSON object with 1 key: result, which has the result returned from GitHub
         e.g.
         {
             'result': {
@@ -154,7 +154,7 @@ def create_app():
         https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
         If it's an invalid (empty) token, it's ignored
 
-        Returns a JSON object with 1 key: result, which has a list of all repositories
+        Returns a JSON object with 1 key: result, which has the result returned from GitHub
         e.g.
         {
             'result': {
